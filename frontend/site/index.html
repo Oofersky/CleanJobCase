@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="MentOrAI — ИИ-ментор для абитуриентов и стажёров: вуз, первая работа, первый месяц. Обратная связь как у наставника."
+    />
+    <meta name="theme-color" content="#0F766E" />
+    <meta property="og:title" content="MentOrAI — ИИ-ментор" />
+    <meta property="og:description" content="ИИ-ментор. Верно. Улучшить. Развивать." />
+    <meta property="og:image" content="/assets/brand/og-cover.png" />
+    <title>MentOrAI — ИИ-ментор</title>
+    <link rel="icon" href="/assets/brand/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+    <link rel="stylesheet" href="/css/motion.css" />
+  </head>
+  <body data-zone="site" data-page="landing">
+    <a class="skip-link" href="#main">К содержанию</a>
+    <div class="app app--landing">
+      <section class="land-hero" aria-labelledby="hero-brand">
+        <div class="land-hero__media" aria-hidden="true">
+          <img
+            src="/assets/brand/hero-empty.png"
+            width="1600"
+            height="900"
+            alt=""
+            fetchpriority="high"
+          />
+        </div>
+        <div class="land-hero__veil"></div>
+
+        <div class="land-rail land-hero__chrome">
+          <header class="site-header site-header--landing" data-site-header></header>
+        </div>
+
+        <div class="land-rail land-hero__body">
+          <div class="land-hero__copy">
+            <p id="hero-brand" class="land-hero__brand" data-reveal-child>MentOrAI</p>
+            <h1 class="land-hero__title" data-reveal-child>ИИ-ментор. Верно. Улучшить. Развивать.</h1>
+            <p class="land-hero__lead" data-reveal-child>
+              Тренируй ответы для вуза, первой работы и первого месяца — с разбором, как у живого наставника.
+            </p>
+            <div class="land-hero__actions" data-reveal-child>
+              <a class="btn btn--accent" data-start-practice href="/site/login/?next=%2Fplatform%2Fchat%2F"
+                >Начать практику</a
+              >
+              <a class="btn btn--ghost land-hero__ghost" href="#scenarios">Сценарии</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main id="main" class="land-main">
+        <section class="land-block" aria-labelledby="problem-title" data-reveal>
+          <div class="land-rail land-duo">
+            <div>
+              <h2 id="problem-title" class="land-heading" data-reveal-child>
+                Без наставника сложно выбрать и ответить уверенно
+              </h2>
+              <p class="land-copy" data-reveal-child>
+                Рейтинги и вакансии есть у всех. MentOrAI задаёт каверзные вопросы, подсвечивает типовые ошибки и даёт
+                более сильную формулировку — текстом или голосом.
+              </p>
+            </div>
+            <ul class="land-points">
+              <li data-reveal-child>
+                <strong>Живой диалог</strong>
+                <span>Текст или голос — как с наставником, а не сухая справка</span>
+              </li>
+              <li data-reveal-child>
+                <strong>Разбор ошибок</strong>
+                <span>Мягко показывает слабые места и даёт пример ответа</span>
+              </li>
+              <li data-reveal-child>
+                <strong>Прогресс</strong>
+                <span>Слабые зоны и PDF перед реальным собеседованием</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="land-block" id="feedback" aria-labelledby="feedback-title" data-reveal>
+          <div class="land-rail">
+            <div class="land-intro">
+              <h2 id="feedback-title" class="land-heading" data-reveal-child>Обратная связь как у эксперта</h2>
+              <p class="land-copy" data-reveal-child>
+                После ответа ментор отмечает, что уже верно, что улучшить и как сказать яснее.
+              </p>
+            </div>
+            <ul class="land-feedback">
+              <li data-reveal-child>
+                <img src="/assets/icons/feedback-correct.png" alt="" width="40" height="40" />
+                <div>
+                  <strong>Верно</strong>
+                  <span>Что звучит уверенно и по делу</span>
+                </div>
+              </li>
+              <li data-reveal-child>
+                <img src="/assets/icons/feedback-improve.png" alt="" width="40" height="40" />
+                <div>
+                  <strong>Улучшить</strong>
+                  <span>Где ответ размытый или слабый</span>
+                </div>
+              </li>
+              <li data-reveal-child>
+                <img src="/assets/icons/feedback-example.png" alt="" width="40" height="40" />
+                <div>
+                  <strong>Пример</strong>
+                  <span>Готовая фраза сильнее</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="land-block" id="scenarios" aria-labelledby="scenarios-title" data-reveal>
+          <div class="land-rail">
+            <div class="land-intro">
+              <h2 id="scenarios-title" class="land-heading" data-reveal-child>Сценарии практики</h2>
+              <p class="land-copy" data-reveal-child>
+                Выбери путь и открой тренажёр. Сценарий можно сменить в любом чате.
+              </p>
+            </div>
+            <div class="land-paths" role="list">
+              <a
+                class="land-path"
+                role="listitem"
+                data-go="university"
+                data-reveal-child
+                href="/platform/chat/?scenario=university&amp;mode=trainer"
+              >
+                <img src="/assets/icons/scenario-university.png" alt="" width="48" height="48" />
+                <strong>Выбор вуза</strong>
+                <span>Программы, баллы и отзывы — не только рейтинг</span>
+              </a>
+              <a
+                class="land-path"
+                role="listitem"
+                data-go="job"
+                data-reveal-child
+                href="/platform/chat/?scenario=job&amp;mode=trainer"
+              >
+                <img src="/assets/icons/scenario-job.png" alt="" width="48" height="48" />
+                <strong>Первая работа</strong>
+                <span>Резюме, портфолио и ответы на собеседовании</span>
+              </a>
+              <a
+                class="land-path"
+                role="listitem"
+                data-go="adapt"
+                data-reveal-child
+                href="/platform/chat/?scenario=adapt&amp;mode=trainer"
+              >
+                <img src="/assets/icons/scenario-adapt.png" alt="" width="48" height="48" />
+                <strong>Первый месяц</strong>
+                <span>Коммуникация в команде и спокойные уточнения</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="land-block" id="modes" aria-labelledby="modes-title" data-reveal>
+          <div class="land-rail land-modes">
+            <div class="land-modes__copy">
+              <h2 id="modes-title" class="land-heading" data-reveal-child>Инфо и тренажёр</h2>
+              <p class="land-copy" data-reveal-child>
+                <strong>Инфо</strong> — ответы по открытым источникам со ссылками.
+                <strong>Тренажёр</strong> — пять кейсов с разбором ошибок и слабых мест.
+              </p>
+            </div>
+            <figure class="land-modes__figure" data-reveal-child>
+              <img
+                src="/assets/brand/landing-scenarios.jpg"
+                width="960"
+                height="540"
+                alt="Практика: вуз, первая работа и первый месяц"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </section>
+
+        <section class="land-block" id="progress" aria-labelledby="lead-title" data-reveal>
+          <div class="land-rail land-duo">
+            <div>
+              <h2 id="lead-title" class="land-heading" data-reveal-child>
+                Слабые зоны и PDF перед собеседованием
+              </h2>
+              <p class="land-copy" data-reveal-child>
+                MentOrAI запоминает, где ты спотыкаешься, возвращает уточняющие вопросы и собирает отчёт или заметки в
+                PDF.
+              </p>
+            </div>
+            <div class="land-finale land-finale--inline" data-reveal-child>
+              <h3>Готов потренироваться?</h3>
+              <p>Создай аккаунт и открой первый чат в платформе.</p>
+              <div class="land-hero__actions">
+                <a class="btn btn--accent" data-start-practice href="/site/register/">Создать аккаунт</a>
+                <a class="btn btn--ghost" href="/site/login/">Войти</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" data-site-footer></footer>
+    </div>
+
+    <script type="module">
+      import { mountSiteChrome, getUser } from "/js/modules/shell.js";
+      import { initPageMotion } from "/js/modules/motion.js";
+      import { getToken } from "/js/modules/api.js";
+      import { loginWithNext, ROUTES } from "/js/modules/paths.js";
+
+      mountSiteChrome({ active: "home" });
+      initPageMotion();
+
+      const loggedIn = Boolean(getToken() || getUser());
+
+      function goPractice(scenario) {
+        const q = scenario
+          ? `?scenario=${encodeURIComponent(scenario)}&mode=trainer`
+          : "?mode=trainer";
+        const target = `${ROUTES.chat}${q}`;
+        window.location.href = loggedIn ? target : loginWithNext(target);
+      }
+
+      document.querySelectorAll("[data-go]").forEach((el) => {
+        el.addEventListener("click", (e) => {
+          e.preventDefault();
+          goPractice(el.dataset.go);
+        });
+      });
+
+      document.querySelectorAll("[data-start-practice]").forEach((el) => {
+        if (!loggedIn) return;
+        el.setAttribute("href", ROUTES.chat);
+      });
+    </script>
+  </body>
+</html>

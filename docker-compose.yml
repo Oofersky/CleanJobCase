@@ -1,0 +1,62 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: mentorai
+      POSTGRES_USER: mentorai
+      POSTGRES_PASSWORD: mentorai
+    # Host 5432 often taken by local Postgres on Windows — use 5433 for tools.
+    # App API still connects via internal hostname `db:5432`.
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mentorai -d mentorai"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: ./backend
+    env_file:
+      - .env
+    environment:
+      # DB host inside compose network (overrides localhost from .env)
+      DATABASE_URL: postgresql+asyncpg://mentorai:mentorai@db:5432/mentorai
+      JWT_SECRET: ${JWT_SECRET:-}
+      ALLOW_INSECURE_DEFAULTS: ${ALLOW_INSECURE_DEFAULTS:-true}
+      APP_ENV: ${APP_ENV:-development}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://127.0.0.1:8181,http://localhost:8181}
+      TRUST_PROXY: ${TRUST_PROXY:-true}
+      CHAT_REQUIRE_AUTH: ${CHAT_REQUIRE_AUTH:-true}
+      GIGACHAT_CREDENTIALS: ${GIGACHAT_CREDENTIALS:-}
+      GIGACHAT_SCOPE: ${GIGACHAT_SCOPE:-GIGACHAT_API_PERS}
+      GIGACHAT_MODEL: ${GIGACHAT_MODEL:-GigaChat-2}
+      GIGACHAT_VERIFY_SSL_CERTS: ${GIGACHAT_VERIFY_SSL_CERTS:-true}
+      GIGACHAT_TIMEOUT: ${GIGACHAT_TIMEOUT:-45}
+      ADMIN_TOKEN: ${ADMIN_TOKEN:-}
+    volumes:
+      - ./backend/data:/app/data
+      - ./backend/app:/app/app
+    # API reachable via nginx; loopback-only for direct local debugging
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    image: nginx:1.27-alpine
+    ports:
+      # Bind all loopback aliases so both localhost and 127.0.0.1 work on Windows
+      - "8181:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html:ro
+      - ./deploy/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - api
+
+volumes:
+  pgdata:

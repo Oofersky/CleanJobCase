@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Регистрация в MentOrAI" />
+    <meta name="theme-color" content="#0F766E" />
+    <title>Регистрация — MentOrAI</title>
+    <link rel="icon" href="/assets/brand/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+    <link rel="stylesheet" href="/css/motion.css" />
+  </head>
+  <body data-zone="site">
+    <a class="skip-link" href="#main">К содержанию</a>
+    <div class="app">
+      <header class="site-header" data-site-header></header>
+      <main id="main" class="auth-page">
+        <form class="form-card ui-panel" id="register-form" novalidate data-reveal>
+          <div class="form-card__brand">
+            <img src="/assets/brand/logo-mark.png" alt="" width="40" height="40" />
+            <span>MentOrAI</span>
+          </div>
+          <h1>Регистрация</h1>
+          <p class="lead">Нужны только имя для обращения, email и пароль.</p>
+          <p class="form-error" data-error role="alert"></p>
+          <div class="field">
+            <label for="name">Как обращаться *</label>
+            <input id="name" name="name" type="text" autocomplete="nickname" required minlength="2" maxlength="80" placeholder="Псевдоним" />
+            <p class="field-hint">Имя для обращения — не ФИО.</p>
+          </div>
+          <div class="field">
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" autocomplete="email" required maxlength="120" />
+          </div>
+          <div class="field">
+            <label for="password">Пароль *</label>
+            <input id="password" name="password" type="password" autocomplete="new-password" required minlength="8" maxlength="128" />
+          </div>
+          <div class="form-actions">
+            <button class="btn btn--accent" type="submit" data-label="Создать аккаунт">Создать аккаунт</button>
+          </div>
+          <p class="form-switch">Уже есть аккаунт? <a href="/site/login/">Войти</a></p>
+        </form>
+      </main>
+      <footer class="site-footer site-footer--compact" data-site-footer></footer>
+    </div>
+    <script type="module" src="/js/auth-page.js"></script>
+  </body>
+</html>

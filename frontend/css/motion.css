@@ -1,0 +1,293 @@
+/* MentOrAI motion — 150–300ms interactions, transform/opacity, reduced-motion safe */
+
+:root {
+  /* Landing / marketing: Jakub polish (200–420ms enters). Controls: Emil-fast. */
+  --motion-fast: 160ms;
+  --motion-base: 220ms;
+  --motion-enter: 420ms;
+}
+
+/* —— Page enter —— */
+body.page-enter {
+  opacity: 0;
+}
+
+body.page-enter.page-enter--ready {
+  opacity: 1;
+  transition: opacity var(--motion-enter) var(--ease-out);
+}
+
+/* —— Scroll / load reveal —— */
+[data-reveal],
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity var(--motion-enter) var(--ease-out),
+    transform var(--motion-enter) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal].is-visible,
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.anim-rise {
+  animation: motion-rise var(--motion-enter) var(--ease-out) both;
+}
+
+.anim-fade {
+  animation: motion-fade var(--motion-base) var(--ease-out) both;
+}
+
+.ui-pulse {
+  animation: motion-pulse var(--motion-fast) var(--ease-out);
+}
+
+/* —— Interactive affordances (every clickable / focusable control) —— */
+.btn,
+.nav__link,
+.chip,
+.scenario,
+.feature,
+.session-item__main,
+.session-item__more,
+.brand,
+.footer-links a,
+.form-switch a,
+a.btn,
+button,
+.composer__field,
+.field input,
+.field select,
+.field textarea {
+  transition:
+    transform var(--motion-fast) var(--ease-out),
+    opacity var(--motion-fast) var(--ease-out),
+    background-color var(--motion-base) var(--ease-out),
+    border-color var(--motion-base) var(--ease-out),
+    box-shadow var(--motion-base) var(--ease-out),
+    color var(--motion-base) var(--ease-out),
+    outline-offset var(--motion-fast) var(--ease-out);
+}
+
+.btn:hover,
+.chip:hover,
+.nav__link:hover,
+.session-item__main:hover,
+.brand:hover,
+.footer-links a:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active,
+.chip:active,
+.nav__link:active,
+.session-item__main:active,
+.session-item__more:active,
+button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus,
+.composer__field:focus {
+  transform: translateY(-1px);
+}
+
+/* —— Lists / chat —— */
+.session-item {
+  animation: motion-rise 280ms var(--ease-out) both;
+}
+
+.session-item:nth-child(1) { animation-delay: 20ms; }
+.session-item:nth-child(2) { animation-delay: 40ms; }
+.session-item:nth-child(3) { animation-delay: 60ms; }
+.session-item:nth-child(4) { animation-delay: 80ms; }
+.session-item:nth-child(5) { animation-delay: 100ms; }
+.session-item:nth-child(n + 6) { animation-delay: 120ms; }
+
+.session-dialog[open],
+.ui-dialog[open] {
+  animation: motion-dialog var(--motion-base) var(--ease-out) both;
+}
+
+.session-dialog[open]::backdrop,
+.ui-dialog[open]::backdrop {
+  animation: motion-fade var(--motion-base) var(--ease-out) both;
+}
+
+.form-card {
+  animation: motion-rise var(--motion-enter) var(--ease-out) both;
+}
+
+.chat-view:not([hidden]) {
+  animation: motion-fade var(--motion-enter) var(--ease-out) both;
+}
+
+.practice-empty:not([hidden]) .practice-empty__card {
+  animation: motion-rise var(--motion-enter) var(--ease-out) both;
+}
+
+.msg__avatar {
+  transition: transform 220ms var(--ease-out), box-shadow 220ms var(--ease-out);
+}
+
+.chip {
+  animation: motion-rise 280ms var(--ease-out) both;
+}
+
+.chat__prompts .chip:nth-child(1) { animation-delay: 30ms; }
+.chat__prompts .chip:nth-child(2) { animation-delay: 60ms; }
+.chat__prompts .chip:nth-child(3) { animation-delay: 90ms; }
+
+.session-item.is-active .session-item__main {
+  box-shadow: inset 3px 0 0 var(--color-primary);
+}
+
+.session-item__main:focus-visible,
+.session-item__more:focus-visible,
+.btn:focus-visible,
+.nav__link:focus-visible,
+.chip:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 2px;
+}
+
+.panel,
+.stat-list li,
+.weak-list li {
+  animation: motion-rise 300ms var(--ease-out) both;
+}
+
+.stat-list li:nth-child(2) { animation-delay: 40ms; }
+.stat-list li:nth-child(3) { animation-delay: 80ms; }
+.stat-list li:nth-child(4) { animation-delay: 120ms; }
+
+.form-error.is-visible {
+  animation: motion-shake 280ms var(--ease-out);
+}
+
+.scenario:hover,
+.feature:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--color-primary) 45%, var(--color-border));
+  box-shadow: var(--shadow-md);
+}
+
+.scenario,
+.feature {
+  transition:
+    transform var(--motion-fast) var(--ease-out),
+    border-color var(--motion-base) var(--ease-out),
+    box-shadow var(--motion-base) var(--ease-out),
+    background-color var(--motion-base) var(--ease-out);
+}
+
+@keyframes motion-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes motion-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes motion-dialog {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes motion-pulse {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+@keyframes motion-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-enter,
+  body.page-enter.page-enter--ready {
+    opacity: 1;
+    transition: none !important;
+  }
+
+  [data-reveal],
+  .reveal,
+  [data-reveal].is-visible,
+  .reveal.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .anim-rise,
+  .anim-fade,
+  .ui-pulse,
+  .session-item,
+  .session-dialog[open],
+  .session-dialog[open]::backdrop,
+  .ui-dialog[open],
+  .ui-dialog[open]::backdrop,
+  .form-card,
+  .chat-view:not([hidden]),
+  .practice-empty:not([hidden]) .practice-empty__card,
+  .chip,
+  .panel,
+  .stat-list li,
+  .weak-list li,
+  .form-error.is-visible,
+  .voice-spectrum__bar,
+  .typing__dot,
+  .btn__spinner {
+    animation: none !important;
+  }
+
+  .btn,
+  .nav__link,
+  .chip,
+  .scenario,
+  .feature,
+  .session-item__main,
+  .session-item__more,
+  .brand,
+  .footer-links a,
+  button,
+  .composer__field,
+  .field input,
+  .field select,
+  .field textarea {
+    transition: none !important;
+  }
+
+  .btn:hover,
+  .chip:hover,
+  .nav__link:hover,
+  .scenario:hover,
+  .feature:hover,
+  .btn:active,
+  button:active {
+    transform: none !important;
+  }
+}

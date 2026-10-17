@@ -1,0 +1,48 @@
+# ── MentOrAI: allowlist for GitHub ──────────────────────────────────────────
+# Track only product code + run config. Everything else stays local.
+
+# Ignore all top-level entries by default
+/*
+
+# Keep product + docs needed to run / present the repo
+!.gitignore
+!README.md
+!LICENSE
+!.env.example
+!docker-compose.yml
+!frontend/
+!backend/
+!deploy/
+
+# ── Still ignore secrets & junk inside kept trees ───────────────────────────
+.env
+.env.*
+!.env.example
+
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.coverage
+**/htmlcov/
+**/.venv/
+**/venv/
+**/env/
+
+**/node_modules/
+**/.DS_Store
+**/Thumbs.db
+**/*.log
+**/*.pdf
+**/.idea/
+**/.vscode/
+**/*.swp
+**/*~
+
+# Local DB / uploads / dialog dumps (never commit user chats)
+**/pgdata/
+backend/data/uploads/
+backend/data/dialogs/
+backend/data/sessions/

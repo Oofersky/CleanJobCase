@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Вход в MentOrAI" />
+    <meta name="theme-color" content="#0F766E" />
+    <title>Вход — MentOrAI</title>
+    <link rel="icon" href="/assets/brand/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+    <link rel="stylesheet" href="/css/motion.css" />
+  </head>
+  <body data-zone="site">
+    <a class="skip-link" href="#main">К содержанию</a>
+    <div class="app">
+      <header class="site-header" data-site-header></header>
+      <main id="main" class="auth-page">
+        <form class="form-card ui-panel" id="login-form" novalidate data-reveal>
+          <div class="form-card__brand">
+            <img src="/assets/brand/logo-mark.png" alt="" width="40" height="40" />
+            <span>MentOrAI</span>
+          </div>
+          <h1>Вход</h1>
+          <p class="lead">Войди, чтобы сохранять чаты, слабые зоны и экспорт.</p>
+          <p class="form-error" data-error role="alert"></p>
+          <div class="field">
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" autocomplete="username" required maxlength="120" />
+          </div>
+          <div class="field">
+            <label for="password">Пароль *</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required minlength="8" maxlength="128" />
+          </div>
+          <div class="form-actions">
+            <button class="btn btn--accent" type="submit" data-label="Войти">Войти</button>
+          </div>
+          <p class="form-switch">Нет аккаунта? <a href="/site/register/">Регистрация</a></p>
+        </form>
+      </main>
+      <footer class="site-footer site-footer--compact" data-site-footer></footer>
+    </div>
+    <script type="module" src="/js/auth-page.js"></script>
+  </body>
+</html>

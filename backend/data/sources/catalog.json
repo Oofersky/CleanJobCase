@@ -1,0 +1,130 @@
+{
+  "sources": [
+    {
+      "id": "minobrnauki-admission",
+      "title": "Высшее образование: открытые материалы Минобрнауки",
+      "source": "Министерство науки и высшего образования РФ",
+      "url": "https://minobrnauki.gov.ru/action/stat/highed/",
+      "accessed": "2026-10-04"
+    },
+    {
+      "id": "gosuslugi-university",
+      "title": "Поступление в вуз онлайн: ситуация на Госуслугах",
+      "source": "Портал Госуслуги",
+      "url": "https://www.gosuslugi.ru/situation/university_admission",
+      "accessed": "2026-10-04"
+    },
+    {
+      "id": "postupi-online",
+      "title": "Поступай правильно: как выбрать профессию, вуз или колледж",
+      "source": "Поступи Онлайн — журнал",
+      "url": "https://postupi.online/journal/kuda-postupat/postupaj-pravilno-kak-vybrat-professiyu-vuz-ili-kolledzh-i-postroit-svoj-marshrut-obrazovaniya-i-karery/",
+      "accessed": "2026-10-04"
+    },
+    {
+      "id": "postupi-admission-track",
+      "title": "Как поступить в вуз: алгоритм поступления (бакалавриат)",
+      "source": "Поступи Онлайн",
+      "url": "https://postupi.online/online-priem/bakalavr/track/",
+      "accessed": "2026-10-04"
+    },
+    {
+      "id": "student-reviews-vuz",
+      "title": "Рейтинг вузов по отзывам студентов (бакалавриат / специалитет)",
+      "source": "Табитуриент — открытые отзывы студентов о вузах",
+      "url": "https://tabiturient.ru/rating/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "id": "student-reviews-vuz-page",
+      "title": "Пример страницы отзывов студентов о вузе (МГУ)",
+      "source": "Табитуриент — модерируемые отзывы студентов «изнутри»",
+      "url": "https://tabiturient.ru/vuzu/mgu/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "id": "academic-oecd-career",
+      "title": "Career readiness: переход из образования в работу",
+      "source": "OECD — академические материалы по карьерной готовности",
+      "url": "https://www.oecd.org/en/topics/sub-issues/career-readiness.html",
+      "accessed": "2026-10-04"
+    },
+    {
+      "id": "hh-first-job",
+      "title": "Составляем резюме: советы соискателям",
+      "source": "hh.ru — карьерные статьи",
+      "url": "https://hh.ru/article/3015367",
+      "accessed": "2026-10-04"
+    },
+    {
+      "id": "hh-resume-employers",
+      "title": "Резюме глазами работодателей: на что смотрят в первую очередь",
+      "source": "hh.ru — карьерные статьи",
+      "url": "https://hh.ru/article/32050",
+      "accessed": "2026-10-04"
+    },
+    {
+      "id": "hh-interview",
+      "title": "Подготовка к собеседованию: основные вопросы и ответы",
+      "source": "hh.ru — карьерные статьи",
+      "url": "https://hh.ru/article/301547",
+      "accessed": "2026-10-04"
+    },
+    {
+      "id": "hh-self-pitch",
+      "title": "Как презентовать свой опыт, чтобы вас наняли",
+      "source": "hh.ru — карьерные статьи",
+      "url": "https://hh.ru/article/302305",
+      "accessed": "2026-10-04"
+    },
+    {
+      "id": "forum-first-interview",
+      "title": "Стажёр, который смог: советы Junior-разрабов и менторов",
+      "source": "Habr / AGIMA — открытый опыт кандидатов и стажёров (сообщество)",
+      "url": "https://habr.com/ru/companies/agima/articles/831466/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "id": "employee-reviews-habr-career",
+      "title": "Рейтинг работодателей и отзывы сотрудников на Хабр Карьере",
+      "source": "Habr Career — открытые отзывы текущих и бывших сотрудников",
+      "url": "https://habr.com/ru/articles/961240/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "id": "intern-diary-first-month",
+      "title": "Дневник стажёра: первый месяц на работе",
+      "source": "Habr / Ozon Tech — открытый опыт адаптации новичка",
+      "url": "https://habr.com/ru/companies/ozontech/articles/862002/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "id": "mintrud-youth",
+      "title": "Демография и занятость молодёжи: открытые программы Минтруда",
+      "source": "Минтруд России",
+      "url": "https://mintrud.gov.ru/ministry/programms/demography",
+      "accessed": "2026-10-04"
+    },
+    {
+      "id": "rabota-russia",
+      "title": "Работа России: поиск вакансий и карьерная навигация",
+      "source": "Федеральный портал «Работа России»",
+      "url": "https://trudvsem.ru/vacancy/search",
+      "accessed": "2026-10-04"
+    },
+    {
+      "id": "onboarding-open",
+      "title": "Induction / onboarding: практики адаптации новичка",
+      "source": "CIPD Factsheet (академический / HR open knowledge)",
+      "url": "https://www.cipd.org/en/knowledge/factsheets/induction-factsheet/",
+      "accessed": "2026-10-04"
+    },
+    {
+      "id": "softline-career",
+      "title": "В ИТ сразу после вуза: гайд по старту карьеры",
+      "source": "Softline — блог / карьерные материалы",
+      "url": "https://softline.ru/about/blog/v-it-srazu-posle-vuza-gayd-po-startu-karery",
+      "accessed": "2026-10-04"
+    }
+  ]
+}
