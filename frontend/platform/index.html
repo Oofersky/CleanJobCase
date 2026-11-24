@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru" class="is-auth-checking">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>Платформа — Прозрачная вакансия</title>
+    <meta name="description" content="Разбор вакансий региона 39: что спросить у работодателя" />
+    <script src="/js/theme-boot.js"></script>
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/app.css" />
+  </head>
+  <body class="plat-body">
+    <header class="app-nav">
+      <div class="wrap app-nav__inner">
+        <a class="brand brand--compact" href="/">
+          <span class="brand__mark" aria-hidden="true">
+            <img src="/assets/logo.svg" alt="" width="36" height="36" />
+          </span>
+          <span class="brand__name" translate="no">Прозрачная вакансия</span>
+        </a>
+        <div class="nav-cluster">
+          <nav class="nav" aria-label="Разделы">
+            <a href="/platform/" aria-current="page">Платформа</a>
+            <a href="/resume/">Резюме</a>
+          </nav>
+          <div id="auth-slot" class="auth-slot"></div>
+          <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Включить тёмную тему">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap plat-main">
+      <section class="page-head">
+        <div>
+          <h1>Разбор вакансий</h1>
+          <p>Регион 39 · что спросить, если в объявлении неясно</p>
+        </div>
+        <div class="run-bar" id="run-bar">
+          <label class="run-bar__history">
+            <span class="run-bar__label">История отчётов</span>
+            <select id="report-history" name="history" aria-label="История отчётов">
+              <option value="new">Новый отчёт</option>
+            </select>
+          </label>
+          <form class="run-bar__new" id="run-form">
+            <label class="run-bar__source">
+              <span class="run-bar__label">Источник</span>
+              <select id="run-source" name="source" aria-label="Источник вакансий">
+                <option value="api">Поиск вакансий в сети</option>
+                <option value="fixture">Пример JSON для теста</option>
+              </select>
+            </label>
+            <button type="submit" class="btn btn--primary" id="btn-run">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="M13 6l6 6-6 6" />
+              </svg>
+              Запустить анализ
+            </button>
+          </form>
+          <a class="btn btn--ghost" id="btn-json" href="#" hidden download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <path d="M7 10l5 5 5-5" />
+              <path d="M12 15V3" />
+            </svg>
+            Скачать отчёт
+          </a>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Сводка">
+        <article class="stat">
+          <div class="stat__icon stat__icon--blue" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="7" width="18" height="13" rx="2" />
+              <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+            </svg>
+          </div>
+          <div>
+            <p class="stat__label">Вакансий</p>
+            <p class="stat__value" id="stat-total">—</p>
+          </div>
+        </article>
+        <article class="stat">
+          <div class="stat__icon stat__icon--orange" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 9v4" />
+              <path d="M12 17h.01" />
+              <path
+                d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"
+              />
+            </svg>
+          </div>
+          <div>
+            <p class="stat__label">Нужны правки</p>
+            <p class="stat__value" id="stat-need-fix">—</p>
+          </div>
+        </article>
+        <article class="stat">
+          <div class="stat__icon stat__icon--red" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
+            </svg>
+          </div>
+          <div>
+            <p class="stat__label">Замечаний</p>
+            <p class="stat__value" id="stat-remarks">—</p>
+          </div>
+        </article>
+        <article class="stat">
+          <div class="stat__icon stat__icon--green" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 20V10" />
+              <path d="M18 20V4" />
+              <path d="M6 20v-4" />
+            </svg>
+          </div>
+          <div>
+            <p class="stat__label">Прозрачность</p>
+            <p class="stat__value" id="stat-score">—%</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="filter-panel" aria-label="Фильтры списка">
+        <div class="filter-bar">
+          <div class="filter-field filter-field--grow">
+            <label for="search">Поиск</label>
+            <div class="toolbar__search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" />
+                <path d="M20 20l-3-3" />
+              </svg>
+              <input
+                id="search"
+                type="search"
+                placeholder="Должность, организация или ID…"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+          <div class="filter-field">
+            <label for="filter-sort">Сортировка</label>
+            <select id="filter-sort">
+              <option value="score-asc">Прозрачность: сначала низкая</option>
+              <option value="score-desc">Прозрачность: сначала высокая</option>
+              <option value="remarks-desc">Больше замечаний сверху</option>
+              <option value="name-asc">По должности А→Я</option>
+              <option value="company-asc">По организации А→Я</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="filter-status">Замечания</label>
+            <select id="filter-status">
+              <option value="">Все</option>
+              <option value="with">Есть замечания</option>
+              <option value="clean">Без замечаний</option>
+            </select>
+          </div>
+          <div class="filter-bar__meta">
+            <button type="button" class="btn btn--ghost btn--compact" id="btn-clear-filters" hidden>
+              Сбросить
+            </button>
+          </div>
+        </div>
+        <details class="filter-more">
+          <summary>
+            <span>Дополнительно</span>
+            <span class="filter-more__chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </summary>
+          <div class="filter-more__body">
+            <div class="filter-more__inner">
+              <div class="filter-bar filter-bar--nested">
+                <div class="filter-field">
+                  <label for="filter-score">Прозрачность</label>
+                  <select id="filter-score">
+                    <option value="">Любая</option>
+                    <option value="low">Низкая &lt; 50%</option>
+                    <option value="mid">Средняя 50–79%</option>
+                    <option value="high">Высокая ≥ 80%</option>
+                  </select>
+                </div>
+                <div class="filter-field">
+                  <label for="filter-kind">Тип замечания</label>
+                  <select id="filter-kind">
+                    <option value="">Любой</option>
+                    <option value="gap">Пропуск</option>
+                    <option value="ambiguity">Неоднозначность</option>
+                    <option value="contradiction">Противоречие</option>
+                  </select>
+                </div>
+                <div class="filter-field">
+                  <label for="filter-topic">Тема</label>
+                  <select id="filter-topic">
+                    <option value="">Все темы</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <div class="error-banner" id="error" role="alert"></div>
+
+      <section class="board" aria-live="polite">
+        <div class="board__loading" id="loading" hidden role="status" aria-live="polite">
+          <div class="board__loading-card">
+            <div class="spinner" aria-hidden="true"></div>
+            <p class="board__loading-title" id="loading-text">Загрузка вакансий и анализ…</p>
+            <p class="board__loading-hint">Это может занять до минуты — не закрывайте страницу</p>
+          </div>
+        </div>
+        <div class="empty" id="empty">
+          <div class="empty__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            </svg>
+          </div>
+          <h2>Отчёт ещё не сформирован</h2>
+          <p>Выберите «Новый отчёт» и нажмите «Запустить анализ».</p>
+        </div>
+        <div class="vac-list" id="list" hidden></div>
+      </section>
+    </main>
+
+    <script type="module" src="/js/platform.js"></script>
+  </body>
+</html>

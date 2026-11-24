@@ -1,0 +1,66 @@
+{
+  "status": "200",
+  "request": { "api": "v1" },
+  "meta": { "total": 3, "limit": 3 },
+  "results": {
+    "vacancies": [
+      {
+        "vacancy": {
+          "id": "demo-gap-001",
+          "job-name": "Инженер по метрологии",
+          "vac_url": "https://trudvsem.ru/vacancy/card/demo/demo-gap-001",
+          "company": { "name": "ФБУ «Калининградский ЦСМ»" },
+          "salary": "от 45000",
+          "salary_min": 45000,
+          "salary_max": 66000,
+          "employment": "Полная занятость",
+          "schedule": "Полный рабочий день",
+          "duty": "Выполнение поверки и калибровки средств измерений; оформление результатов; ведение учёта.",
+          "requirements": "Высшее образование, уверенный пользователь ПК, опыт 1–3 года приветствуется.",
+          "requirement": {
+            "education": "Высшее образование",
+            "qualification": "MS Office",
+            "experience": 1
+          },
+          "addresses": {
+            "address": [
+              {
+                "location": "Калининградская область, г Калининград, Больничная улица, 4"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "vacancy": {
+          "id": "demo-flex-002",
+          "job-name": "Специалист по кадрам",
+          "vac_url": "https://trudvsem.ru/vacancy/card/demo/demo-flex-002",
+          "company": { "name": "МУП «Пример»" },
+          "salary": "конкурентная зарплата",
+          "employment": "Полная занятость",
+          "schedule": "Гибкий график",
+          "duty": "Кадровый документооборот.",
+          "requirements": "",
+          "requirement": {},
+          "addresses": { "address": [] }
+        }
+      },
+      {
+        "vacancy": {
+          "id": "demo-contradict-003",
+          "job-name": "",
+          "company": { "name": "ГБУЗ «Пример»" },
+          "salary": "от 120000",
+          "salary_min": 25000,
+          "salary_max": 30000,
+          "employment": "",
+          "schedule": "",
+          "duty": "Работа.",
+          "requirements": "",
+          "addresses": { "address": [{ "location": "" }] }
+        }
+      }
+    ]
+  }
+}

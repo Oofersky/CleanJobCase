@@ -1,0 +1,115 @@
+{
+  "generated_at": "2026-11-24T12:00:00+00:00",
+  "source": "fixture",
+  "source_url": null,
+  "vacancies_processed": 3,
+  "pages_fetched": 0,
+  "ai_used": false,
+  "error": null,
+  "vacancies": [
+    {
+      "vacancy_id": "demo-ok-001",
+      "vacancy_url": "https://trudvsem.ru/vacancy/card/demo-ok-001",
+      "job_name": "Инженер по метрологии",
+      "company_name": "ГУП «Пример»",
+      "remarks": []
+    },
+    {
+      "vacancy_id": "demo-ambig-002",
+      "vacancy_url": "https://trudvsem.ru/vacancy/card/demo-ambig-002",
+      "job_name": "Специалист отдела кадров",
+      "company_name": "Администрация МО",
+      "remarks": [
+        {
+          "topic": "график",
+          "source_field": "schedule",
+          "quote": "Гибкий график",
+          "quote_secondary": "",
+          "kind": "ambiguity",
+          "problem": "Формулировка «Гибкий график» неоднозначна для соискателя.",
+          "recommendation": "Спросите конкретные дни недели, смены и часы работы."
+        },
+        {
+          "topic": "оплата",
+          "source_field": "salary",
+          "quote": "конкурентная зарплата",
+          "quote_secondary": "",
+          "kind": "ambiguity",
+          "problem": "Формулировка «конкурентная зарплата» неоднозначна для соискателя.",
+          "recommendation": "Спросите вилку оклада или оклад «от/до» в рублях."
+        }
+      ]
+    },
+    {
+      "vacancy_id": "demo-contradict-003",
+      "vacancy_url": null,
+      "job_name": "",
+      "company_name": "ГБУЗ «Пример»",
+      "remarks": [
+        {
+          "topic": "название должности",
+          "source_field": "job-name",
+          "quote": "",
+          "quote_secondary": "",
+          "kind": "gap",
+          "problem": "Не указано название должности.",
+          "recommendation": "Спросите точное название должности."
+        },
+        {
+          "topic": "обязанности",
+          "source_field": "duty",
+          "quote": "Работа.",
+          "quote_secondary": "",
+          "kind": "gap",
+          "problem": "Обязанности не описаны или слишком краткие.",
+          "recommendation": "Спросите основные задачи и зоны ответственности."
+        },
+        {
+          "topic": "требования",
+          "source_field": "requirements",
+          "quote": "",
+          "quote_secondary": "",
+          "kind": "gap",
+          "problem": "Требования к кандидату не указаны ни в описании, ни в структурированных полях.",
+          "recommendation": "Спросите про образование, навыки и опыт — или подтвердите, что опыт не нужен."
+        },
+        {
+          "topic": "график",
+          "source_field": "schedule",
+          "quote": "",
+          "quote_secondary": "",
+          "kind": "gap",
+          "problem": "График работы не указан.",
+          "recommendation": "Спросите тип графика и, по возможности, часы и дни работы."
+        },
+        {
+          "topic": "тип занятости",
+          "source_field": "employment",
+          "quote": "",
+          "quote_secondary": "",
+          "kind": "gap",
+          "problem": "Тип занятости не указан.",
+          "recommendation": "Спросите тип занятости: полная, частичная, временная, стажировка и т.п."
+        },
+        {
+          "topic": "место работы",
+          "source_field": "addresses.address.location",
+          "quote": "",
+          "quote_secondary": "",
+          "kind": "gap",
+          "problem": "Адрес или населённый пункт места работы не указан.",
+          "recommendation": "Спросите город и адрес либо подтвердите удалённый формат."
+        },
+        {
+          "topic": "оплата",
+          "source_field": "salary",
+          "quote": "от 120000",
+          "quote_secondary": "salary_min=25000, salary_max=30000",
+          "kind": "contradiction",
+          "problem": "Текст оплаты не согласуется со структурированными полями salary_min/salary_max.",
+          "recommendation": "Спросите, какая сумма верная: из текста вакансии или из числовой вилки."
+        }
+      ]
+    }
+  ]
+}

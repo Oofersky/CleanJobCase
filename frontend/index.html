@@ -1,10 +1,322 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0;url=/site/" />
-    <script>location.replace("/site/" + location.search + location.hash);</script>
-    <title>MentOrAI</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>Прозрачная вакансия</title>
+    <meta
+      name="description"
+      content="Разбор вакансий региона 39: какие вопросы стоит задать работодателю, если в объявлении туман."
+    />
+    <script src="/js/theme-boot.js"></script>
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/app.css" />
   </head>
-  <body></body>
+  <body class="land">
+    <header class="land-top">
+      <div class="wrap land-top__inner">
+        <a class="brand" href="/">
+          <span class="brand__mark" aria-hidden="true">
+            <img src="/assets/logo.svg" alt="" width="40" height="40" />
+          </span>
+          <span class="brand__text">
+            <span class="brand__name" translate="no">Прозрачная вакансия</span>
+            <span class="brand__tag">Калининградская область</span>
+          </span>
+        </a>
+        <div class="nav-cluster">
+          <nav class="nav land-nav" aria-label="На странице">
+            <a href="#how">Как работает</a>
+            <a href="#for">Для кого</a>
+            <a href="#faq">Вопросы</a>
+          </nav>
+          <button
+            type="button"
+            class="theme-toggle"
+            data-theme-toggle
+            aria-pressed="false"
+            aria-label="Включить тёмную тему"
+          >
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+            </svg>
+          </button>
+          <a class="btn btn--primary btn--compact" href="/platform/">К разбору</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="wrap land-hero-panel" aria-labelledby="hero-title">
+        <div class="land-hero-panel__copy">
+          <p class="land-kicker">Регион 39 · портал «Работа в России»</p>
+          <h1 id="hero-title" translate="no">Не понятно в вакансии — спросите до отклика</h1>
+          <p class="land-hero-panel__lead">
+            Сервис разбирает объявления, находит пропуски и противоречия и подсказывает,
+            какие вопросы стоит задать работодателю.
+          </p>
+          <div class="land-actions">
+            <a class="btn btn--hero" href="/platform/">Разобрать вакансии</a>
+          </div>
+        </div>
+        <div class="land-hero-qs" aria-hidden="true">
+          <svg
+            class="land-hero-qs__svg"
+            viewBox="0 0 720 420"
+            preserveAspectRatio="xMaxYMax slice"
+            focusable="false"
+          >
+            <!-- статичная зона наведения: не двигается с анимацией -->
+            <path
+              class="land-hero-qs__hit"
+              d="M0 355 H720 V420 H0 Z M390 0 H720 V355 H390 Z"
+              fill="transparent"
+            />
+            <g
+              class="land-hero-qs__marks"
+              fill="#333333"
+              font-family="var(--font-sans), system-ui, sans-serif"
+              font-weight="700"
+              text-anchor="middle"
+              dominant-baseline="middle"
+            >
+              <!-- bottom strip -->
+              <text class="q" x="20" y="402" font-size="26" style="--dx:6px;--dy:-18px;--r:-14deg">?</text>
+              <text class="q" x="52" y="408" font-size="20" style="--dx:-8px;--dy:-14px;--r:22deg">¿</text>
+              <text class="q" x="84" y="398" font-size="30" style="--dx:10px;--dy:-22px;--r:8deg">?</text>
+              <text class="q" x="118" y="410" font-size="18" style="--dx:-6px;--dy:-16px;--r:-28deg">?</text>
+              <text class="q" x="148" y="400" font-size="28" style="--dx:12px;--dy:-12px;--r:18deg">¿</text>
+              <text class="q" x="182" y="406" font-size="22" style="--dx:-10px;--dy:-20px;--r:-6deg">?</text>
+              <text class="q" x="214" y="396" font-size="32" style="--dx:8px;--dy:-24px;--r:30deg">?</text>
+              <text class="q" x="250" y="408" font-size="18" style="--dx:-12px;--dy:-10px;--r:-20deg">¿</text>
+              <text class="q" x="280" y="400" font-size="26" style="--dx:14px;--dy:-18px;--r:12deg">?</text>
+              <text class="q" x="314" y="410" font-size="20" style="--dx:-8px;--dy:-26px;--r:-32deg">?</text>
+              <text class="q" x="346" y="394" font-size="34" style="--dx:10px;--dy:-14px;--r:26deg">¿</text>
+              <text class="q" x="384" y="406" font-size="22" style="--dx:-14px;--dy:-20px;--r:-10deg">?</text>
+              <text class="q" x="416" y="398" font-size="28" style="--dx:12px;--dy:-28px;--r:16deg">?</text>
+              <text class="q" x="450" y="410" font-size="18" style="--dx:-10px;--dy:-12px;--r:-24deg">¿</text>
+              <text class="q" x="480" y="392" font-size="30" style="--dx:16px;--dy:-22px;--r:8deg">?</text>
+              <text class="q" x="516" y="404" font-size="24" style="--dx:-12px;--dy:-16px;--r:34deg">?</text>
+              <text class="q" x="548" y="388" font-size="36" style="--dx:8px;--dy:-30px;--r:-18deg">¿</text>
+              <text class="q" x="586" y="400" font-size="22" style="--dx:-16px;--dy:-14px;--r:20deg">?</text>
+              <text class="q" x="618" y="386" font-size="32" style="--dx:10px;--dy:-26px;--r:-28deg">?</text>
+              <text class="q" x="650" y="398" font-size="26" style="--dx:-8px;--dy:-18px;--r:14deg">¿</text>
+              <text class="q" x="682" y="384" font-size="38" style="--dx:12px;--dy:-24px;--r:-12deg">?</text>
+              <text class="q" x="708" y="396" font-size="24" style="--dx:-14px;--dy:-20px;--r:28deg">?</text>
+              <!-- mid rise -->
+              <text class="q" x="430" y="360" font-size="22" style="--dx:8px;--dy:-16px;--r:-16deg">?</text>
+              <text class="q" x="468" y="348" font-size="28" style="--dx:-10px;--dy:-22px;--r:22deg">¿</text>
+              <text class="q" x="504" y="356" font-size="20" style="--dx:14px;--dy:-12px;--r:-8deg">?</text>
+              <text class="q" x="536" y="332" font-size="34" style="--dx:-8px;--dy:-28px;--r:18deg">?</text>
+              <text class="q" x="572" y="346" font-size="24" style="--dx:12px;--dy:-18px;--r:-30deg">¿</text>
+              <text class="q" x="604" y="318" font-size="40" style="--dx:-12px;--dy:-24px;--r:10deg">?</text>
+              <text class="q" x="638" y="338" font-size="26" style="--dx:10px;--dy:-16px;--r:32deg">?</text>
+              <text class="q" x="670" y="308" font-size="32" style="--dx:-14px;--dy:-30px;--r:-20deg">¿</text>
+              <text class="q" x="700" y="328" font-size="28" style="--dx:8px;--dy:-14px;--r:14deg">?</text>
+              <text class="q" x="448" y="312" font-size="18" style="--dx:16px;--dy:-10px;--r:-36deg">?</text>
+              <text class="q" x="490" y="298" font-size="26" style="--dx:-8px;--dy:-26px;--r:12deg">¿</text>
+              <text class="q" x="528" y="280" font-size="30" style="--dx:12px;--dy:-18px;--r:-22deg">?</text>
+              <text class="q" x="564" y="268" font-size="22" style="--dx:-10px;--dy:-28px;--r:26deg">?</text>
+              <text class="q" x="598" y="252" font-size="36" style="--dx:14px;--dy:-16px;--r:-14deg">¿</text>
+              <text class="q" x="632" y="270" font-size="24" style="--dx:-12px;--dy:-22px;--r:20deg">?</text>
+              <text class="q" x="666" y="242" font-size="42" style="--dx:8px;--dy:-32px;--r:-26deg">?</text>
+              <text class="q" x="698" y="258" font-size="28" style="--dx:-16px;--dy:-14px;--r:16deg">¿</text>
+              <!-- upper right pile — flush to right edge -->
+              <text class="q" x="520" y="230" font-size="20" style="--dx:10px;--dy:-12px;--r:24deg">?</text>
+              <text class="q" x="556" y="210" font-size="28" style="--dx:-8px;--dy:-24px;--r:-18deg">¿</text>
+              <text class="q" x="592" y="196" font-size="32" style="--dx:12px;--dy:-20px;--r:8deg">?</text>
+              <text class="q" x="626" y="178" font-size="24" style="--dx:-10px;--dy:-28px;--r:30deg">?</text>
+              <text class="q" x="658" y="188" font-size="36" style="--dx:14px;--dy:-16px;--r:-12deg">¿</text>
+              <text class="q" x="690" y="164" font-size="30" style="--dx:-12px;--dy:-26px;--r:22deg">?</text>
+              <text class="q" x="712" y="148" font-size="34" style="--dx:8px;--dy:-18px;--r:-28deg">?</text>
+              <text class="q" x="548" y="152" font-size="18" style="--dx:16px;--dy:-10px;--r:14deg">¿</text>
+              <text class="q" x="586" y="136" font-size="26" style="--dx:-8px;--dy:-22px;--r:-20deg">?</text>
+              <text class="q" x="622" y="118" font-size="30" style="--dx:10px;--dy:-16px;--r:18deg">?</text>
+              <text class="q" x="656" y="108" font-size="22" style="--dx:-14px;--dy:-28px;--r:-8deg">¿</text>
+              <text class="q" x="688" y="92" font-size="38" style="--dx:12px;--dy:-20px;--r:26deg">?</text>
+              <text class="q" x="712" y="74" font-size="28" style="--dx:-10px;--dy:-24px;--r:-16deg">?</text>
+              <text class="q" x="600" y="78" font-size="20" style="--dx:8px;--dy:-14px;--r:32deg">¿</text>
+              <text class="q" x="636" y="58" font-size="26" style="--dx:-12px;--dy:-18px;--r:-22deg">?</text>
+              <text class="q" x="672" y="48" font-size="32" style="--dx:14px;--dy:-26px;--r:12deg">?</text>
+              <text class="q" x="702" y="34" font-size="36" style="--dx:-8px;--dy:-20px;--r:-30deg">¿</text>
+              <text class="q" x="718" y="18" font-size="24" style="--dx:10px;--dy:-14px;--r:20deg">?</text>
+              <text class="q" x="654" y="24" font-size="18" style="--dx:-14px;--dy:-12px;--r:28deg">?</text>
+              <text class="q" x="686" y="8" font-size="28" style="--dx:12px;--dy:-22px;--r:-14deg">¿</text>
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <section class="wrap land-stats" aria-label="Кратко о сервисе">
+        <div>
+          <strong>Регион 39</strong>
+          <span>Калининградская область</span>
+        </div>
+        <div>
+          <strong>Что неясно</strong>
+          <span>Пропуски, двоякость, противоречия</span>
+        </div>
+        <div>
+          <strong>Что спросить</strong>
+          <span>Готовые вопросы к работодателю</span>
+        </div>
+      </section>
+
+      <section class="wrap land-section" id="how" aria-labelledby="how-title">
+        <header class="land-section__head">
+          <div class="land-leg" aria-hidden="true">
+            <img class="land-leg__img" src="/assets/leg.svg" alt="" width="140" height="200" />
+          </div>
+          <h2 id="how-title">Три шага — от вакансии к вопросам</h2>
+          <p>Данные из открытого API, проверка формулировок и список того, что уточнить до собеседования.</p>
+        </header>
+        <ol class="land-steps">
+          <li>
+            <span class="land-steps__num" aria-hidden="true">1</span>
+            <div>
+              <h3>Источник</h3>
+              <p>Актуальные вакансии региона 39 с портала «Работа в России».</p>
+            </div>
+          </li>
+          <li>
+            <span class="land-steps__num" aria-hidden="true">2</span>
+            <div>
+              <h3>Разбор</h3>
+              <p>Правила и проверка: что не сказано, что двояко, что противоречит.</p>
+            </div>
+          </li>
+          <li>
+            <span class="land-steps__num" aria-hidden="true">3</span>
+            <div>
+              <h3>Вопросы</h3>
+              <p>По каждому замечанию — что спросить у работодателя, со ссылкой на фрагмент текста.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="wrap land-section land-split" id="for" aria-labelledby="for-title">
+        <div class="land-split__copy">
+          <h2 id="for-title">Для соискателя</h2>
+          <ul class="land-checklist">
+            <li>Перед откликом — понять, чего в объявлении не хватает.</li>
+            <li>На собеседовании — не забыть уточнить график, оплату и формат работы.</li>
+            <li>Черновик резюме под выбранную вакансию — из вашего опыта.</li>
+          </ul>
+          <a class="btn btn--primary" href="/platform/">Перейти к разбору</a>
+        </div>
+        <aside class="land-split__card" aria-label="Резюме">
+          <h3>Резюме</h3>
+          <p>Соберите черновик под вакансию из вашего опыта и навыков.</p>
+          <a href="/resume/">Открыть раздел резюме →</a>
+        </aside>
+      </section>
+
+      <section class="wrap land-section" id="faq" aria-labelledby="faq-title">
+        <header class="land-section__head">
+          <h2 id="faq-title">Частые вопросы</h2>
+        </header>
+        <div class="land-faq">
+          <details class="land-faq__item">
+            <summary>
+              <span>Откуда берутся вакансии?</span>
+              <span class="land-faq__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
+              </span>
+            </summary>
+            <div class="land-faq__body">
+              <p>Из открытых данных портала «Работа в России» по региону 39 (opendata.trudvsem.ru).</p>
+            </div>
+          </details>
+          <details class="land-faq__item">
+            <summary>
+              <span>Это ответы работодателя?</span>
+              <span class="land-faq__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
+              </span>
+            </summary>
+            <div class="land-faq__body">
+              <p>Нет. Сервис формулирует вопросы, которые стоит задать. Ответы даёт только работодатель.</p>
+            </div>
+          </details>
+          <details class="land-faq__item">
+            <summary>
+              <span>Можно ли сохранить отчёт?</span>
+              <span class="land-faq__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
+              </span>
+            </summary>
+            <div class="land-faq__body">
+              <p>Да. После входа отчёты пишутся в вашу историю: можно открыть прошлый прогон или скачать JSON.</p>
+            </div>
+          </details>
+          <details class="land-faq__item">
+            <summary>
+              <span>Нужна ли регистрация?</span>
+              <span class="land-faq__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
+              </span>
+            </summary>
+            <div class="land-faq__body">
+              <p>Да, для платформы и резюме. Логин придумываете сами, почта нужна при регистрации. Чужие отчёты вам не видны.</p>
+            </div>
+          </details>
+          <details class="land-faq__item">
+            <summary>
+              <span>Что такое файл JSON в источнике?</span>
+              <span class="land-faq__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
+              </span>
+            </summary>
+            <div class="land-faq__body">
+              <p>Это пример набора вакансий для тестирования системы. Поиск в сети загружает актуальные объявления региона 39.</p>
+            </div>
+          </details>
+          <details class="land-faq__item">
+            <summary>
+              <span>Зачем раздел «Резюме»?</span>
+              <span class="land-faq__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
+              </span>
+            </summary>
+            <div class="land-faq__body">
+              <p>Там можно собрать черновик резюме под выбранную вакансию из вашего опыта и навыков.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="land-footer">
+      <div class="wrap land-footer__grid">
+        <div class="land-footer__brand">
+          <span class="brand__name" translate="no">Прозрачная вакансия</span>
+          <p>Разбор объявлений региона 39: что спросить у работодателя, если в вакансии туман.</p>
+        </div>
+        <nav class="land-footer__col" aria-label="Сервис">
+          <strong>Сервис</strong>
+          <a href="/platform/">Платформа</a>
+          <a href="/resume/">Резюме</a>
+          <a href="/login/">Вход</a>
+        </nav>
+        <nav class="land-footer__col" aria-label="О проекте">
+          <strong>О проекте</strong>
+          <a href="#how">Как работает</a>
+          <a href="#faq">Частые вопросы</a>
+          <a href="https://opendata.trudvsem.ru/" rel="noopener noreferrer" target="_blank">Данные trudvsem</a>
+        </nav>
+      </div>
+      <div class="wrap land-footer__bar">
+        <span>Калининградская область</span>
+        <span>opendata.trudvsem.ru · регион 39</span>
+      </div>
+    </footer>
+
+    <script type="module" src="/js/landing.js"></script>
+  </body>
 </html>

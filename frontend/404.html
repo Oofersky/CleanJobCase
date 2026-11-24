@@ -1,34 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <base href="/" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0F766E" />
-    <title>Страница не найдена — MentOrAI</title>
-    <link rel="icon" href="/assets/brand/favicon.png" type="image/png" />
+    <meta name="theme-color" content="#000000" />
+    <title>Страница не найдена — Прозрачная вакансия</title>
+    <script src="/js/theme-boot.js"></script>
     <link rel="stylesheet" href="/css/tokens.css" />
-    <link rel="stylesheet" href="/css/base.css" />
-    <link rel="stylesheet" href="/css/components.css" />
-    <link rel="stylesheet" href="/css/pages.css" />
+    <link rel="stylesheet" href="/css/app.css" />
   </head>
-  <body data-zone="site">
-    <div class="app">
-      <main class="auth-page error-page">
-        <section class="form-card ui-panel error-card" data-reveal>
-          <div class="form-card__brand">
-            <img src="/assets/brand/logo-mark.png" alt="" width="40" height="40" />
-            <span>MentOrAI</span>
-          </div>
-          <p class="error-code">404</p>
-          <h1>Страница не найдена</h1>
-          <p class="lead">Такого адреса нет. Вернись на главную или в практику.</p>
-          <div class="panel__actions">
-            <a class="btn btn--accent" href="/site/">На главную</a>
-            <a class="btn btn--ghost" href="/platform/chat/">К чату</a>
-          </div>
-        </section>
-      </main>
-    </div>
+  <body class="plat-body">
+    <main class="wrap error-page">
+      <p class="error-page__code">404</p>
+      <h1>Такой страницы нет</h1>
+      <p class="error-page__lead">Проверьте адрес или вернитесь на главную.</p>
+      <div class="error-page__actions">
+        <a class="btn btn--primary" href="/">На главную</a>
+        <a class="btn btn--ghost" href="/platform/">К разбору</a>
+      </div>
+    </main>
+    <script type="module" src="/js/theme.js"></script>
   </body>
 </html>
