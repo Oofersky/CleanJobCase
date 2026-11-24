@@ -318,7 +318,6 @@ curl -b cookies.txt -X POST "http://127.0.0.1:8000/api/verify" ^
 
 | | |
 |--|--|
-| GitHub | [ссылка на репозиторий] |
 | Демонстрационное видео | [https://disk.yandex.ru/i/_V5OLyWCSYCWEw](https://disk.yandex.ru/i/_V5OLyWCSYCWEw) |
 | SHA финального коммита | `30cf814b1e780da49adbc25ddf364576f8e57d3a` |
 
